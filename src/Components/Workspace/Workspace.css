@@ -1,0 +1,16 @@
+.workspace {
+    /* overflow-y: scroll; */
+
+    /* border-radius: 1%;
+    margin: 20px; */
+    padding: 20px;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
