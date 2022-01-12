@@ -27,12 +27,10 @@ const Workspace = () => {
     useEffect(() => {
         setLoading(true)
         async function getData() {
-            const response = await axios.get(`https://free.currconv.com/api/v7/currencies?apiKey=${process.env.REACT_APP_CONVERT}`);
-            console.log(response.data);
+            const response = await axios.get(`https://free.currconv.com/api/v7/currencies?apiKey=[INSERT KEY HERE]`);
             let currencies = Object.keys(response.data.results).map(currency => {
                 return currency;
             })
-            console.log(currencies);
             setRates(currencies);
         }
         getData();
@@ -52,14 +50,12 @@ const Workspace = () => {
     function handleAmount(e) {
         console.log(e.target.value);
         setAmount(e.target.value);
-    }
+    }       
 
     async function convert() {
         setSubmitting(true);
         const query = rate + "_" + target;
-        const response = await axios.get('https://free.currconv.com/api/v7/convert?q='
-        + query + `&compact=ultra&apiKey=${process.env.REACT_APP_CONVERT}`);
-        console.log(response.data[query]);
+        const response = await axios.get('https://free.currconv.com/api/v7/convert?q=' + query + `&compact=ultra&apiKey=[INSERT KEY HERE]`);
         let q = [...queries];
         q.push({
             from: rate,
