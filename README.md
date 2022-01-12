@@ -1,5 +1,7 @@
 # Currency Converter
 
+Deployed app: https://dev.d3al3u1qa7qj91.amplifyapp.com/
+
 To install:
 
 1. Download code or clone the Git repository.
